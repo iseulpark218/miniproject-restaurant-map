@@ -1,38 +1,223 @@
+/* googleMap */
+
+/* App */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  width: 420px;
+  /* height: 650px; */
+  height: 100vh;
+  border: solid lightgrey 1px;
+  /* border-radius: 30px; */
+  background-color: white;
+  z-index: 1;
+}
+.App::-webkit-scrollbar {
+  width: 5px;
+}
+.App::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.534);
+}
+.App::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 5px white;
+}
+/* List */
+.ListBox {
+  /* position: absolute; */
+  /* position: fixed; */
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  width: 405px;
+  height: 130px;
+  margin: 5px;
+  background-color: white;
+  /* border: solid grey 3px; */
+  box-shadow: 1px 1px 10px 0px lightgrey;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.ListBox_ul {
+  display: flex;
+  flex-direction: row;
+  padding-inline-start: 0px;
+}
+.ListBox_li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+.ListBox_li_imgBox {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  /* background-color: black; */
+}
+.ListBox_li_contents {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+/* ListBox_li_contents1 */
+.ListBox_li_contents1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ListBox_li_contents1_nm_area {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+.ListBox_li_contents1_area {
+  display: flex;
+  margin-right: 30px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+  color: #505050;
+}
+.ListBox_li_contents1_nm {
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: -0.9px;
+  color: #202020;
+}
+.ListBox_li_contents1_category {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+  color: #505050;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ListBox_li_contents1_keyword {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+  color: #9e9e9e;
+}
+/* ListBox_li_contents2 */
+
+.ListBox_li_contents2 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.ListBox_li_contents2_score {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+  color: #09d2e5;
+}
+.ListBox_li_contents2_score_ {
+  color: black;
+}
+.ListBox_li_contents2_review_cnt {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+}
+.ListBox_li_contents2_favorites_cnt {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: -0.65px;
+}
+
+@media only screen and (max-width: 360px) {
+  /* App */
+  .App {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 360px;
+    /* width: 100%; */
+    height: 160px;
+    margin-top: 530px;
+    /* height: 100vh; */
+    border: solid rgba(211, 211, 211, 0) 1px;
+    /* border-radius: 30px; */
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .App::-webkit-scrollbar {
+    display: none;
+  }
+  /* .App::-webkit-scrollbar {
+    width: 5px;
+  }
+  .App::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.534);
+  }
+  .App::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 5px white;
+  } */
+  /* List */
+  .ListBox {
+    /* position: absolute; */
+    /* position: fixed; */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 345px;
+    height: 125px;
+    /* margin-left: 30px; */
+    margin: 5px;
+    background-color: white;
+    /* border: solid grey 3px; */
+    box-shadow: 1px 1px 10px 0px lightgrey;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 0;
+  }
+
+  .ListBox_ul {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0px;
+  }
+  .ListBox_li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+  }
+  .ListBox_li_imgBox {
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    margin-right: 12px;
+    /* background-color: black; */
   }
 }
