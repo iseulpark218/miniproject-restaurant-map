@@ -173,15 +173,7 @@
   .App::-webkit-scrollbar {
     display: none;
   }
-  /* .App::-webkit-scrollbar {
-    width: 5px;
-  }
-  .App::-webkit-scrollbar-thumb {
-    background-color: rgba(128, 128, 128, 0.534);
-  }
-  .App::-webkit-scrollbar-track {
-    box-shadow: inset 0px 0px 5px white;
-  } */
+
   /* List */
   .ListBox {
     /* position: absolute; */

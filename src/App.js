@@ -4,14 +4,14 @@ import React from "react";
 import List from "./json/List.js"
 
 function Map() {
-//   console.log("=======")
+  //   console.log("=======")
   // console.log(List.nm);
   // console.log(List[0].keyword.join("#"));
-//   console.log("=======")
+  //   console.log("=======")
 
   return (
     <div className="App">
-{/* 임시 */}
+      {/* 임시 */}
       {/* <div className="tem">
       {List.map((item, index) => (
         
@@ -20,7 +20,7 @@ function Map() {
           </div>
       ))}
       </div> */}
-      
+
       {/* 하단 리스트 */}
       {/* 
     · nm - 식당명 o
@@ -46,43 +46,41 @@ function Map() {
       */}
       {/* Json형식의 배열데이터를 map함수를 이용해 반복처리 */}
       {List.map((item, index) => (
-
         <div className="ListBox">
-          
-        <ul className="ListBox_ul">
-          {/* mapping 예정 */}
-          <li className="ListBox_li">
+          <ul className="ListBox_ul">
+            {/* mapping 예정 */}
+            <li className="ListBox_li">
               <div className="ListBox_li_imgBox"><img
-               src={item.image}
-                  alt={item.image}
-                  layout="responsive"
-                  objectFit="cover" //써야됨 or none
-                  width={100}
-                  height={100}
+                src={item.image}
+                alt={item.image}
+                layout="responsive"
+                objectFit="cover" //써야됨 or none
+                width={100}
+                height={100}
               /></div>
-          <div className="ListBox_li_contents">
-          <div className="ListBox_li_contents1">
-            <div className="ListBox_li_contents1_nm_area">
-                  <span className="ListBox_li_contents1_nm">{item.nm}</span>          
-                <span className="ListBox_li_contents1_area">{item.area} | {item.distance}</span>          
-                </div>
-            <span className="ListBox_li_contents1_category">{item.category}</span>          
+              <div className="ListBox_li_contents">
+                <div className="ListBox_li_contents1">
+                  <div className="ListBox_li_contents1_nm_area">
+                    <span className="ListBox_li_contents1_nm">{item.nm}</span>
+                    <span className="ListBox_li_contents1_area">{item.area} | {item.distance}</span>
+                  </div>
+                  <span className="ListBox_li_contents1_category">{item.category}</span>
                   {/* 각인덱스 앞 #추가 */}
                   <span className="ListBox_li_contents1_keyword">#{item.keyword.join(" #")}</span>
-          </div>
-            <div className="ListBox_li_contents2">
-              <span className="ListBox_li_contents2_score">{item.score}<span className="ListBox_li_contents2_score_">점</span></span>
-              <span className="ListBox_li_contents2_review_cnt">⭐ {item.user_score} ({item.review_cnt})</span>
-              <span className="ListBox_li_contents2_favorites_cnt">💜 {item.favorites_cnt}</span>
-            </div>  
-            </div>  
-          </li>
- 
-            </ul>
-            
+                </div>
+                <div className="ListBox_li_contents2">
+                  <span className="ListBox_li_contents2_score">{item.score}<span className="ListBox_li_contents2_score_">점</span></span>
+                  <span className="ListBox_li_contents2_review_cnt">⭐ {item.user_score} ({item.review_cnt})</span>
+                  <span className="ListBox_li_contents2_favorites_cnt">💜 {item.favorites_cnt}</span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
         </div>
       ))}
-        
+
     </div>
   );
 }
