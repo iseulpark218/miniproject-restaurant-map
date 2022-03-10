@@ -5,13 +5,15 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  width: 420px;
+  width: 430px;
   /* height: 650px; */
   height: 100vh;
   border: solid lightgrey 1px;
   /* border-radius: 30px; */
   background-color: white;
   z-index: 1;
+  padding: 10px;
+  align-items: center;
 }
 .App::-webkit-scrollbar {
   width: 5px;
@@ -22,6 +24,17 @@
 .App::-webkit-scrollbar-track {
   box-shadow: inset 0px 0px 5px white;
 }
+/* title */
+.title {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  border: double black 8px;
+  border-radius: 20px;
+}
 /* List */
 .ListBox {
   /* position: absolute; */
@@ -29,7 +42,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  width: 405px;
+  width: 400px;
   height: 130px;
   margin: 5px;
   background-color: white;
@@ -42,12 +55,11 @@
 
 .ListBox_ul {
   display: flex;
-  flex-direction: row;
   padding-inline-start: 0px;
+  margin: 10px;
 }
 .ListBox_li {
   display: flex;
-  flex-direction: row;
   align-items: center;
   cursor: pointer;
   list-style: none;
@@ -55,7 +67,7 @@
 .ListBox_li_imgBox {
   width: 100px;
   height: 100px;
-  margin-left: 25px;
+  margin-left: 15px;
   margin-right: 25px;
   /* background-color: black; */
 }
@@ -64,11 +76,13 @@
   flex-direction: column;
   width: 240px;
 }
+
 /* ListBox_li_contents1 */
 .ListBox_li_contents1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
 }
 .ListBox_li_contents1_nm_area {
   width: 100%;
@@ -106,7 +120,9 @@
   display: flex;
   justify-content: flex-start;
   width: 200px;
-  /* text-overflow: ellipsis; */
+  /* ...적용 */
+  /* 안먹음...왜?... */
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin-top: 5px;
@@ -116,8 +132,8 @@
   letter-spacing: -0.65px;
   color: #9e9e9e;
 }
-/* ListBox_li_contents2 */
 
+/* ListBox_li_contents2 */
 .ListBox_li_contents2 {
   margin-top: 10px;
   display: flex;
@@ -148,6 +164,14 @@
   letter-spacing: -0.65px;
 }
 
+/* 부트스트랩 pagination 추가 */
+.pagination {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 360px) {
   /* App */
   .App {
@@ -173,7 +197,18 @@
   .App::-webkit-scrollbar {
     display: none;
   }
-
+  /* title */
+  .title {
+    /* display: flex; */
+    /* align-items: center; */
+    /* margin: 15px; */
+    /* padding: 5px; */
+    margin-left: -260px;
+    font-size: 30px;
+    font-weight: 700;
+    border: double black 8px;
+    border-radius: 20px;
+  }
   /* List */
   .ListBox {
     /* position: absolute; */
@@ -211,5 +246,24 @@
     margin-left: 15px;
     margin-right: 12px;
     /* background-color: black; */
+  }
+  /* 추가 */
+  /* ListBox_li_contents1 */
+  .ListBox_li_contents1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  .ListBox_li_contents1_area {
+    display: flex;
+    margin-right: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.65px;
+    color: #505050;
+    margin-right: 45px;
   }
 }
